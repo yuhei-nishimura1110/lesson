@@ -1,5 +1,22 @@
 SQLインジェクション
 アプリケーションのセキュリティー上の不備に意図的に利用しアプリケーションが想定しないSQL文を実行させることによりデータベースシステムを不正に操作する攻撃方法のこと
 
+例：
+String x = new java.util.Scanner().nextLine();
+String y = new java.util.Scanner().nextLine();
+String sql = "INSERT INTO user (name, age) VALUES (x, y)"
+
+
+としたときxに「a,a)";DELETE FORM;INSERT INTO user (name,age)VALUES(x」
+を代入されると削除させるなどの攻撃方法をSQLインジェクションという。
+改善例：
+String sql = "INSERT INTO users (name, age) VALUES (?, ?);";
+PreparedStatement statement = con.prepareStatement(sql);
+
+statement.setString(1, "名前");
+statement.setString(2, "年齢");
+
 クロスサイトスクリプティング
 攻撃者が送り込んだ悪意のコードをそのページを閲覧した不特定多数のユーザーに、スクリプト（簡易的なプログラム）として実行させる可能性があること
+
+
