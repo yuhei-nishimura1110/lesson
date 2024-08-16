@@ -1,2 +1,17 @@
 開発に役立つ賢いツール。
 使いこなすには勉強あるのみ。
+
+
+@Getter	getterメソッドを生成します。
+@Setter	setterメソッドを生成します。
+@ToString	toStringメソッドを生成します。
+@NonNull	Nullチェックのコードを生成します。Nullだった場合NullPointerExceptionがスローされます。
+@AllArgsConstructor	全ての引数を使ったコンストラクタを生成します。
+@NoArgsConstructor	引数なしのコンストラクタを生成します。
+@RequiredArgsConstructor	必須の引数（final）を持つコンストラクタを生成します。
+@FieldDefaults(boolean makeFinal, AccessLevel level)	アクセス修飾子やfinal修飾子がない変数に対して、アノテーション引数に指定した形で修飾子を付与します。
+@EqualsAndHashCode	equals、hashCodeメソッドを生成します。
+@Data	@ToString、@Getter、@Setter、@EqualsAndHashCode、@RequiredArgsConstructorの5つのアノテーションをまとめて付与します。
+@Value	@ToString、@Getter、@EqualsAndHashCode、@AllArgsConstructor、@FieldDefaultsの5つのアノテーションをまとめ付与します。クラスはfinalに、各フィールドはprivate finalになります。
+@Builder	対象クラスを生成するためのBuilderクラスを生成します。
+@Slf4j	slf4jを使ったロギングコードを生成します。その他にもLog4jやCommonsLogなど様々なロガーに対応しています。
