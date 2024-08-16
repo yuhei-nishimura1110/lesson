@@ -25,3 +25,44 @@
 ｝
 
 としたとき勇者は走って逃げ、魔術師は魔法を使って逃げる
+
+例
+public class 花(){
+    public void 咲け(){
+        ......
+    }
+}
+
+
+public class 薔薇() extends 花{
+    public void 咲け(){
+        ......
+    }
+}
+
+
+public class ひまわり() extends 花{
+    public void 咲け(){
+        ......
+    }
+}
+
+
+public class タンポポ() extends 花{
+    public void 咲け(){
+        ......
+    }
+}
+public class main{
+    public static void main(String[] args){
+        花[]　flower = new 花[3];
+        flower[0]=new 薔薇;
+        flower[1]=new ひまわり;
+　　　　flower[2]=new たんぽぽ;
+　　　　for(flower fl:f){
+            fl.咲け();
+        }
+    }
+}
+このように実行するとそれぞれの花の咲けメソッドが実行される
+このような機能を多態性という
