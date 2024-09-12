@@ -1,0 +1,12 @@
+controllerの@PostMappingで受けることができるのがmethod="post"ー＞@GetMappingではできない
+controllerの@GetMappingで受けることができるのがmethod="get"ー＞@PostMappingではできない
+その他で気づいた大きな違いはリンクの違いが出ること
+postは指定したリンクそのまま出るが
+getは代入した値が反映されたリンクが出る。
+例:
+postのとき"test"とでるものをgetにかえたとすると
+
+"test?name=西村優平"のように代入した値が反映されたものになる。
+
+調べたもの
+
